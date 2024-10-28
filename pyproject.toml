@@ -1,32 +1,17 @@
-[build-system]
-requires = ["flit_core >=3.2,<4"]
-build-backend = "flit_core.buildapi"
-
 [project]
-name = "pronunciation_scoring"
-version = "0.0.1"
+name = "pronunciation-scoring"
+version = "0.1.0"
 description = "Explore about pronunciation scoring"
-authors = [
-  { name = "pradana adnyana" },
-]
-license = { file = "LICENSE" }
 readme = "README.md"
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License"
+requires-python = ">=3.12"
+dependencies = [
+    "black>=24.10.0",
+    "flake8>=7.1.1",
+    "isort>=5.13.2",
+    "loguru>=0.7.2",
+    "mkdocs>=1.6.1",
+    "pip>=24.3.1",
+    "python-dotenv>=1.0.1",
+    "tqdm>=4.66.5",
+    "typer>=0.12.5",
 ]
-requires-python = "~=3.12"
-
-[tool.black]
-line-length = 99
-include = '\.pyi?$'
-exclude = '''
-/(
-    \.git
-  | \.venv
-)/
-'''
-
-[tool.ruff.lint.isort]
-known_first_party = ["pronunciation_scoring"]
-force_sort_within_sections = true
